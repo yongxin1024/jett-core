@@ -16,22 +16,22 @@ import org.apache.poi.ss.usermodel.HorizontalAlignment;
  */
 public enum Alignment
 {
-    CENTER         ((short) HorizontalAlignment.CENTER.ordinal()),
-    CENTERSELECTION((short) HorizontalAlignment.CENTER_SELECTION.ordinal()),
-    DISTRIBUTED    ((short) HorizontalAlignment.DISTRIBUTED.ordinal()),
-    FILL           ((short) HorizontalAlignment.FILL.ordinal()),
-    GENERAL        ((short) HorizontalAlignment.GENERAL.ordinal()),
-    JUSTIFY        ((short) HorizontalAlignment.JUSTIFY.ordinal()),
-    LEFT           ((short) HorizontalAlignment.LEFT.ordinal()),
-    RIGHT          ((short) HorizontalAlignment.RIGHT.ordinal());
+    CENTER         ( HorizontalAlignment.CENTER),
+    CENTERSELECTION( HorizontalAlignment.CENTER_SELECTION),
+    DISTRIBUTED    ( HorizontalAlignment.DISTRIBUTED),
+    FILL           ( HorizontalAlignment.FILL),
+    GENERAL        ( HorizontalAlignment.GENERAL),
+    JUSTIFY        ( HorizontalAlignment.JUSTIFY),
+    LEFT           ( HorizontalAlignment.LEFT),
+    RIGHT          ( HorizontalAlignment.RIGHT);
 
-    private short myIndex;
+    private HorizontalAlignment myIndex;
 
     /**
      * Constructs an <code>Alignment</code>.
      * @param index The index.
      */
-    Alignment(short index)
+    Alignment(HorizontalAlignment index)
     {
         myIndex = index;
     }
@@ -40,7 +40,7 @@ public enum Alignment
      * Returns the index.
      * @return The index.
      */
-    public short getIndex()
+    public HorizontalAlignment getIndex()
     {
         return myIndex;
     }

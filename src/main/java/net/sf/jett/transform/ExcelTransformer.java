@@ -747,9 +747,8 @@ public class ExcelTransformer
             }
 
             Name namedRange = null;
-            for (int i = 0; i < numNamedRanges; i++)
+            for(Name n: workbook.getAllNames())
             {
-                Name n = workbook.getNameAt(i);
                 if (n.getNameName().equals(namedRangeName) &&
                         n.getSheetIndex() == sheetScopeIndex)
                 {

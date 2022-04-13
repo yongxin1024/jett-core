@@ -7,10 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -169,10 +166,10 @@ public class ImplCollProcessingTest extends TestCase
         Cell cNoPae = TestUtility.getCell(noPae, 6, 2);
         assertNotNull(cNoPae);
         CellStyle csNoPae = cNoPae.getCellStyle();
-        assertEquals(CellStyle.BORDER_THIN, csNoPae.getBorderBottom());
-        assertEquals(CellStyle.BORDER_THIN, csNoPae.getBorderTop());
-        assertEquals(CellStyle.BORDER_THIN, csNoPae.getBorderLeft());
-        assertEquals(CellStyle.BORDER_THIN, csNoPae.getBorderRight());
+        assertEquals(BorderStyle.THIN, csNoPae.getBorderBottom());
+        assertEquals(BorderStyle.THIN, csNoPae.getBorderTop());
+        assertEquals(BorderStyle.THIN, csNoPae.getBorderLeft());
+        assertEquals(BorderStyle.THIN, csNoPae.getBorderRight());
         assertEquals("c0c0c0", TestUtility.getCellForegroundColorString(noPae, 6, 2));
 
         Sheet paeClear = workbook.getSheetAt(5);
@@ -184,10 +181,10 @@ public class ImplCollProcessingTest extends TestCase
         Cell cPaeClear = TestUtility.getCell(paeClear, 6, 2);
         assertNotNull(cPaeClear);
         CellStyle csPaeClear = cPaeClear.getCellStyle();
-        assertEquals(CellStyle.BORDER_THIN, csPaeClear.getBorderBottom());
-        assertEquals(CellStyle.BORDER_THIN, csPaeClear.getBorderTop());
-        assertEquals(CellStyle.BORDER_THIN, csPaeClear.getBorderLeft());
-        assertEquals(CellStyle.BORDER_THIN, csPaeClear.getBorderRight());
+        assertEquals(BorderStyle.THIN, csPaeClear.getBorderBottom());
+        assertEquals(BorderStyle.THIN, csPaeClear.getBorderTop());
+        assertEquals(BorderStyle.THIN, csPaeClear.getBorderLeft());
+        assertEquals(BorderStyle.THIN, csPaeClear.getBorderRight());
         assertEquals("c0c0c0", TestUtility.getCellForegroundColorString(paeClear, 6, 2));
 
         Sheet paeRemove = workbook.getSheetAt(6);

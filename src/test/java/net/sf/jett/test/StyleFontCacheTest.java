@@ -6,12 +6,7 @@ import java.io.InputStream;
 import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Color;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -114,20 +109,20 @@ public class StyleFontCacheTest extends TestCase
         //assertEquals(numCellStyles, csCache.getNumEntries());
 
         // Defaults.
-        short alignment = cs.getAlignment();
-        short borderBottom = cs.getBorderBottom();
-        short borderLeft = cs.getBorderLeft();
-        short borderRight = cs.getBorderRight();
-        short borderTop = cs.getBorderTop();
+        HorizontalAlignment alignment = cs.getAlignment();
+        BorderStyle borderBottom = cs.getBorderBottom();
+        BorderStyle borderLeft = cs.getBorderLeft();
+        BorderStyle borderRight = cs.getBorderRight();
+        BorderStyle borderTop = cs.getBorderTop();
         String dataFormat = cs.getDataFormatString();
         Color fillBackgroundColor = cs.getFillBackgroundColorColor();
         Color fillForegroundColor = cs.getFillForegroundColorColor();
-        short fillPattern = cs.getFillPattern();
+        FillPatternType fillPattern = cs.getFillPattern();
         boolean hidden = cs.getHidden();
         short indention = cs.getIndention();
         boolean locked = cs.getLocked();
         short rotationDegrees = cs.getRotation();
-        short verticalAlignment = cs.getVerticalAlignment();
+        VerticalAlignment verticalAlignment = cs.getVerticalAlignment();
         boolean wrapText = cs.getWrapText();
         // Don't bother actually getting it from the CellStyle here, which would
         // involve HSSF/XSSF-specific processing.
@@ -136,7 +131,7 @@ public class StyleFontCacheTest extends TestCase
         Color rightBorderColor = null;
         Color topBorderColor = null;
         // Font properties (shouldn't change at all for CellStyle tests).
-        short fontBoldweight = fNormal.getBoldweight();
+        boolean fontBoldweight = fNormal.getBold();
         int fontCharset = fNormal.getCharSet();
         Color fontColor;
         if (workbook instanceof HSSFWorkbook)
@@ -165,7 +160,7 @@ public class StyleFontCacheTest extends TestCase
                 bottomBorderColor, leftBorderColor, rightBorderColor, topBorderColor, fontCharset, fontTypeOffset,
                 locked, hidden);
         assertNotNull(cached);
-        short newAlignment = CellStyle.ALIGN_RIGHT;
+        HorizontalAlignment newAlignment = HorizontalAlignment.RIGHT;
         // Expect a cache miss.
         CellStyle notCached = csCache.retrieveCellStyle(fontBoldweight, fontItalic, fontColor, fontName, fontHeightInPoints,
          /* changed */ newAlignment, borderBottom, borderLeft, borderRight, borderTop, dataFormat, fontUnderline, fontStrikeout,

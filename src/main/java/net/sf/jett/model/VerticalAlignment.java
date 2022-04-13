@@ -14,19 +14,19 @@ package net.sf.jett.model;
  */
 public enum VerticalAlignment
 {
-    BOTTOM     ((short) org.apache.poi.ss.usermodel.VerticalAlignment.BOTTOM.ordinal()),
-    CENTER     ((short) org.apache.poi.ss.usermodel.VerticalAlignment.CENTER.ordinal()),
-    DISTRIBUTED((short) org.apache.poi.ss.usermodel.VerticalAlignment.DISTRIBUTED.ordinal()),
-    JUSTIFY    ((short) org.apache.poi.ss.usermodel.VerticalAlignment.JUSTIFY.ordinal()),
-    TOP        ((short) org.apache.poi.ss.usermodel.VerticalAlignment.TOP.ordinal());
+    BOTTOM     (org.apache.poi.ss.usermodel.VerticalAlignment.BOTTOM),
+    CENTER     (org.apache.poi.ss.usermodel.VerticalAlignment.CENTER),
+    DISTRIBUTED(org.apache.poi.ss.usermodel.VerticalAlignment.DISTRIBUTED),
+    JUSTIFY    (org.apache.poi.ss.usermodel.VerticalAlignment.JUSTIFY),
+    TOP        (org.apache.poi.ss.usermodel.VerticalAlignment.TOP);
 
-    private short myIndex;
+    private org.apache.poi.ss.usermodel.VerticalAlignment myIndex;
 
     /**
      * Constructs a <code>VerticalAlignment</code>.
      * @param index The index.
      */
-    VerticalAlignment(short index)
+    VerticalAlignment(org.apache.poi.ss.usermodel.VerticalAlignment index)
     {
         myIndex = index;
     }
@@ -35,7 +35,7 @@ public enum VerticalAlignment
      * Returns the index.
      * @return The index.
      */
-    public short getIndex()
+    public org.apache.poi.ss.usermodel.VerticalAlignment getIndex()
     {
         return myIndex;
     }

@@ -51,7 +51,7 @@ public class FontCache
      */
     private void cachePreExistingFonts()
     {
-        short numFonts = myWorkbook.getNumberOfFonts();
+        int numFonts = myWorkbook.getNumberOfFonts();
         logger.trace("Caching {} pre-existing cell fonts.", numFonts);
         for (short i = 0; i < numFonts; i++)
         {
@@ -84,7 +84,7 @@ public class FontCache
      * @return A <code>Font</code> that matches all given properties, or
      *    <code>null</code> if it doesn't exist.
      */
-    public Font retrieveFont(short fontBoldweight, boolean fontItalic, Color fontColor, String fontName,
+    public Font retrieveFont(boolean fontBoldweight, boolean fontItalic, Color fontColor, String fontName,
                              short fontHeightInPoints, byte fontUnderline, boolean fontStrikeout, int fontCharset, short fontTypeOffset)
     {
         String representation = getRepresentation(fontBoldweight, fontItalic, fontColor, fontName, fontHeightInPoints,
@@ -148,7 +148,7 @@ public class FontCache
         else
             throw new IllegalArgumentException("Bad Font type: " + f.getClass().getName());
 
-        return getRepresentation(f.getBoldweight(), f.getItalic(), fontColor, f.getFontName(),
+        return getRepresentation(f.getBold(), f.getItalic(), fontColor, f.getFontName(),
                 f.getFontHeightInPoints(), f.getUnderline(), f.getStrikeout(), f.getCharSet(), f.getTypeOffset());
     }
 
@@ -166,7 +166,7 @@ public class FontCache
      * @param fontTypeOffset The font type offset.
      * @return The string representation.
      */
-    private String getRepresentation(short fontBoldweight, boolean fontItalic, Color fontColor, String fontName,
+    private String getRepresentation(boolean fontBoldweight, boolean fontItalic, Color fontColor, String fontName,
                                      short fontHeightInPoints, byte fontUnderline, boolean fontStrikeout, int fontCharset, short fontTypeOffset)
     {
         StringBuilder buf = new StringBuilder();

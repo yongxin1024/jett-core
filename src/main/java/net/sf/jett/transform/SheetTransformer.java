@@ -8,14 +8,7 @@ import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.ConditionalFormatting;
-import org.apache.poi.ss.usermodel.Footer;
-import org.apache.poi.ss.usermodel.Header;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.SheetConditionalFormatting;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.CellReference;
 
@@ -270,7 +263,7 @@ public class SheetTransformer
                 for (int cellNum = left; cellNum <= right; cellNum++)
                 {
                     Cell cell = row.getCell(cellNum);
-                    if (cell != null && cell.getCellType() == Cell.CELL_TYPE_STRING)
+                    if (cell != null && cell.getCellType() == CellType.STRING)
                     {
                         String cellText = cell.getStringCellValue();
                         if (cellText != null)
@@ -347,7 +340,7 @@ public class SheetTransformer
                 for (int cellNum = left; cellNum <= right; cellNum++)
                 {
                     Cell cell = row.getCell(cellNum);
-                    if (cell != null && cell.getCellType() == Cell.CELL_TYPE_STRING)
+                    if (cell != null && cell.getCellType() == CellType.STRING)
                     {
                         String cellText = cell.getStringCellValue();
                         if (cellText != null && cellText.startsWith(Formula.BEGIN_FORMULA) &&

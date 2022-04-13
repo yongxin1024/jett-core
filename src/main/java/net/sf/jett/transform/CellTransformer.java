@@ -29,6 +29,8 @@ import net.sf.jett.tag.TagLibraryRegistry;
 import net.sf.jett.util.RichTextStringUtil;
 import net.sf.jett.util.SheetUtil;
 
+import static org.apache.poi.ss.usermodel.CellType.STRING;
+
 /**
  * A <code>CellTransformer</code> knows how to transform a <code>Cell</code>
  * inside of a <code>Sheet</code>.  If a <code>Tag</code> is found, then the
@@ -73,25 +75,25 @@ public class CellTransformer
         Object oldValue = null;
         switch(cell.getCellType())
         {
-        case Cell.CELL_TYPE_STRING:
+        case STRING:
             oldValue = cell.getStringCellValue();
             break;
-        case Cell.CELL_TYPE_NUMERIC:
+        case NUMERIC:
             if (DateUtil.isCellDateFormatted(cell))
                 oldValue = cell.getDateCellValue();  // java.util.Date
             else
                 oldValue = cell.getNumericCellValue();  // double
             break;
-        case Cell.CELL_TYPE_BLANK:
+        case BLANK:
             oldValue = null;
             break;
-        case Cell.CELL_TYPE_FORMULA:
+        case FORMULA:
             oldValue = cell.getCellFormula();  // java.lang.String
             break;
-        case Cell.CELL_TYPE_BOOLEAN:
+        case BOOLEAN:
             oldValue = cell.getBooleanCellValue();  // boolean
             break;
-        case Cell.CELL_TYPE_ERROR:
+        case ERROR:
             oldValue = cell.getErrorCellValue();  // byte
             break;
         }
@@ -112,7 +114,7 @@ public class CellTransformer
         Object newValue = null;
         switch(cell.getCellType())
         {
-        case Cell.CELL_TYPE_STRING:
+        case STRING:
             TagParser parser = new TagParser(cell);
             parser.parse();
 
@@ -146,22 +148,22 @@ public class CellTransformer
                 }
             }
             break;
-        case Cell.CELL_TYPE_NUMERIC:
+        case NUMERIC:
             if (DateUtil.isCellDateFormatted(cell))
                 newValue = cell.getDateCellValue();  // java.util.Date
             else
                 newValue = cell.getNumericCellValue();  // double
             break;
-        case Cell.CELL_TYPE_BLANK:
+        case BLANK:
             newValue = null;
             break;
-        case Cell.CELL_TYPE_FORMULA:
+        case FORMULA:
             newValue = cell.getCellFormula();  // java.lang.String
             break;
-        case Cell.CELL_TYPE_BOOLEAN:
+        case BOOLEAN:
             newValue = cell.getBooleanCellValue();  // boolean
             break;
-        case Cell.CELL_TYPE_ERROR:
+        case ERROR:
             newValue = cell.getErrorCellValue();  // byte
             break;
         }  // End switch on cell type
@@ -382,7 +384,7 @@ public class CellTransformer
     private boolean isMatchingEndTag(WorkbookContext context, Cell candidate, String namespaceAndTagName,
                                      List<TagParser> innerTags)
     {
-        if (candidate.getCellType() != Cell.CELL_TYPE_STRING)
+        if (candidate.getCellType() != STRING)
             return false;
         TagParser candidateParser = new TagParser(candidate);
         candidateParser.parse();

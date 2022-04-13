@@ -272,8 +272,9 @@ public class MultipleNonConsecutiveTest extends TestCase
         // "cloneSheet".  Test them by setting them in the template sheet.
         // The "checkSheet" method will check all resultant sheets to see if they
         // retain these settings.
-        assertEquals("org.apache.poi.ss.util.CellRangeAddress [A:A]", sheet.getRepeatingColumns().toString());
-        assertEquals("org.apache.poi.ss.util.CellRangeAddress [1:1]", sheet.getRepeatingRows().toString());
+
+        assertEquals(CellRangeAddress.valueOf("A:A").toString(), sheet.getRepeatingColumns().toString());
+        assertEquals(CellRangeAddress.valueOf("1:1").toString(), sheet.getRepeatingRows().toString());
 
         assertEquals(2, ps.getCopies());
         assertTrue(ps.getDraft());

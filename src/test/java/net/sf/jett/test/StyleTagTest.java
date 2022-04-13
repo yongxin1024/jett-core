@@ -109,151 +109,151 @@ public class StyleTagTest extends TestCase
    {
       // Alignments
       Sheet alignment = workbook.getSheetAt(0);
-      assertEquals(HorizontalAlignment.CENTER.ordinal(), TestUtility.getCellStyle(alignment, 0, 1).getAlignment());
-      assertEquals(HorizontalAlignment.CENTER.ordinal(), TestUtility.getCellStyle(alignment, 0, 3).getAlignment());
-      assertEquals(HorizontalAlignment.CENTER_SELECTION.ordinal(), TestUtility.getCellStyle(alignment, 1, 1).getAlignment());
-      assertEquals(HorizontalAlignment.CENTER_SELECTION.ordinal(), TestUtility.getCellStyle(alignment, 1, 3).getAlignment());
-      assertEquals(HorizontalAlignment.DISTRIBUTED.ordinal(), TestUtility.getCellStyle(alignment, 2, 1).getAlignment());
-      assertEquals(HorizontalAlignment.DISTRIBUTED.ordinal(), TestUtility.getCellStyle(alignment, 2, 3).getAlignment());
-      assertEquals(HorizontalAlignment.FILL.ordinal(), TestUtility.getCellStyle(alignment, 3, 1).getAlignment());
-      assertEquals(HorizontalAlignment.FILL.ordinal(), TestUtility.getCellStyle(alignment, 3, 3).getAlignment());
-      assertEquals(HorizontalAlignment.GENERAL.ordinal(), TestUtility.getCellStyle(alignment, 4, 1).getAlignment());
-      assertEquals(HorizontalAlignment.GENERAL.ordinal(), TestUtility.getCellStyle(alignment, 4, 3).getAlignment());
-      assertEquals(HorizontalAlignment.JUSTIFY.ordinal(), TestUtility.getCellStyle(alignment, 5, 1).getAlignment());
-      assertEquals(HorizontalAlignment.JUSTIFY.ordinal(), TestUtility.getCellStyle(alignment, 5, 3).getAlignment());
-      assertEquals(HorizontalAlignment.LEFT.ordinal(), TestUtility.getCellStyle(alignment, 6, 1).getAlignment());
-      assertEquals(HorizontalAlignment.LEFT.ordinal(), TestUtility.getCellStyle(alignment, 6, 3).getAlignment());
-      assertEquals(HorizontalAlignment.RIGHT.ordinal(), TestUtility.getCellStyle(alignment, 7, 1).getAlignment());
-      assertEquals(HorizontalAlignment.RIGHT.ordinal(), TestUtility.getCellStyle(alignment, 7, 3).getAlignment());
+      assertEquals(HorizontalAlignment.CENTER, TestUtility.getCellStyle(alignment, 0, 1).getAlignment());
+      assertEquals(HorizontalAlignment.CENTER, TestUtility.getCellStyle(alignment, 0, 3).getAlignment());
+      assertEquals(HorizontalAlignment.CENTER_SELECTION, TestUtility.getCellStyle(alignment, 1, 1).getAlignment());
+      assertEquals(HorizontalAlignment.CENTER_SELECTION, TestUtility.getCellStyle(alignment, 1, 3).getAlignment());
+      assertEquals(HorizontalAlignment.DISTRIBUTED, TestUtility.getCellStyle(alignment, 2, 1).getAlignment());
+      assertEquals(HorizontalAlignment.DISTRIBUTED, TestUtility.getCellStyle(alignment, 2, 3).getAlignment());
+      assertEquals(HorizontalAlignment.FILL, TestUtility.getCellStyle(alignment, 3, 1).getAlignment());
+      assertEquals(HorizontalAlignment.FILL, TestUtility.getCellStyle(alignment, 3, 3).getAlignment());
+      assertEquals(HorizontalAlignment.GENERAL, TestUtility.getCellStyle(alignment, 4, 1).getAlignment());
+      assertEquals(HorizontalAlignment.GENERAL, TestUtility.getCellStyle(alignment, 4, 3).getAlignment());
+      assertEquals(HorizontalAlignment.JUSTIFY, TestUtility.getCellStyle(alignment, 5, 1).getAlignment());
+      assertEquals(HorizontalAlignment.JUSTIFY, TestUtility.getCellStyle(alignment, 5, 3).getAlignment());
+      assertEquals(HorizontalAlignment.LEFT, TestUtility.getCellStyle(alignment, 6, 1).getAlignment());
+      assertEquals(HorizontalAlignment.LEFT, TestUtility.getCellStyle(alignment, 6, 3).getAlignment());
+      assertEquals(HorizontalAlignment.RIGHT, TestUtility.getCellStyle(alignment, 7, 1).getAlignment());
+      assertEquals(HorizontalAlignment.RIGHT, TestUtility.getCellStyle(alignment, 7, 3).getAlignment());
 
       // Border Types
       Sheet border = workbook.getSheetAt(1);
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 1).getBorderBottom());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 1).getBorderLeft());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 1).getBorderRight());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 1).getBorderTop());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 3).getBorderBottom());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 5).getBorderLeft());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 7).getBorderRight());
-      assertEquals(BorderStyle.NONE.ordinal(), TestUtility.getCellStyle(border, 1, 9).getBorderTop());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 1).getBorderBottom());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 1).getBorderLeft());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 1).getBorderRight());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 1).getBorderTop());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 3).getBorderBottom());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 5).getBorderLeft());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 7).getBorderRight());
+      assertEquals(BorderStyle.NONE, TestUtility.getCellStyle(border, 1, 9).getBorderTop());
 
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 1).getBorderBottom());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 1).getBorderLeft());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 1).getBorderRight());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 1).getBorderTop());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 3).getBorderBottom());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 5).getBorderLeft());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 7).getBorderRight());
-      assertEquals(BorderStyle.THIN.ordinal(), TestUtility.getCellStyle(border, 3, 9).getBorderTop());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 1).getBorderBottom());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 1).getBorderLeft());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 1).getBorderRight());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 1).getBorderTop());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 3).getBorderBottom());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 5).getBorderLeft());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 7).getBorderRight());
+      assertEquals(BorderStyle.THIN, TestUtility.getCellStyle(border, 3, 9).getBorderTop());
 
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 1).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 1).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 1).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 1).getBorderTop());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 3).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 5).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 7).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM.ordinal(), TestUtility.getCellStyle(border, 5, 9).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 1).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 1).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 1).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 1).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 3).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 5).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 7).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM, TestUtility.getCellStyle(border, 5, 9).getBorderTop());
 
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 1).getBorderBottom());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 1).getBorderLeft());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 1).getBorderRight());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 1).getBorderTop());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 3).getBorderBottom());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 5).getBorderLeft());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 7).getBorderRight());
-      assertEquals(BorderStyle.DASHED.ordinal(), TestUtility.getCellStyle(border, 7, 9).getBorderTop());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 1).getBorderBottom());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 1).getBorderLeft());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 1).getBorderRight());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 1).getBorderTop());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 3).getBorderBottom());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 5).getBorderLeft());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 7).getBorderRight());
+      assertEquals(BorderStyle.DASHED, TestUtility.getCellStyle(border, 7, 9).getBorderTop());
 
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 1).getBorderBottom());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 1).getBorderLeft());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 1).getBorderRight());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 1).getBorderTop());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 3).getBorderBottom());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 5).getBorderLeft());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 7).getBorderRight());
-      assertEquals(BorderStyle.HAIR.ordinal(), TestUtility.getCellStyle(border, 9, 9).getBorderTop());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 1).getBorderBottom());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 1).getBorderLeft());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 1).getBorderRight());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 1).getBorderTop());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 3).getBorderBottom());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 5).getBorderLeft());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 7).getBorderRight());
+      assertEquals(BorderStyle.HAIR, TestUtility.getCellStyle(border, 9, 9).getBorderTop());
 
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 1).getBorderBottom());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 1).getBorderLeft());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 1).getBorderRight());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 1).getBorderTop());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 3).getBorderBottom());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 5).getBorderLeft());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 7).getBorderRight());
-      assertEquals(BorderStyle.THICK.ordinal(), TestUtility.getCellStyle(border, 11, 9).getBorderTop());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 1).getBorderBottom());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 1).getBorderLeft());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 1).getBorderRight());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 1).getBorderTop());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 3).getBorderBottom());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 5).getBorderLeft());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 7).getBorderRight());
+      assertEquals(BorderStyle.THICK, TestUtility.getCellStyle(border, 11, 9).getBorderTop());
 
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 1).getBorderBottom());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 1).getBorderLeft());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 1).getBorderRight());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 1).getBorderTop());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 3).getBorderBottom());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 5).getBorderLeft());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 7).getBorderRight());
-      assertEquals(BorderStyle.DOUBLE.ordinal(), TestUtility.getCellStyle(border, 13, 9).getBorderTop());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 1).getBorderBottom());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 1).getBorderLeft());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 1).getBorderRight());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 1).getBorderTop());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 3).getBorderBottom());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 5).getBorderLeft());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 7).getBorderRight());
+      assertEquals(BorderStyle.DOUBLE, TestUtility.getCellStyle(border, 13, 9).getBorderTop());
 
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 1).getBorderBottom());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 1).getBorderLeft());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 1).getBorderRight());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 1).getBorderTop());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 3).getBorderBottom());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 5).getBorderLeft());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 7).getBorderRight());
-      assertEquals(BorderStyle.DOTTED.ordinal(), TestUtility.getCellStyle(border, 15, 9).getBorderTop());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 1).getBorderBottom());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 1).getBorderLeft());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 1).getBorderRight());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 1).getBorderTop());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 3).getBorderBottom());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 5).getBorderLeft());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 7).getBorderRight());
+      assertEquals(BorderStyle.DOTTED, TestUtility.getCellStyle(border, 15, 9).getBorderTop());
 
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 1).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 1).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 1).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 1).getBorderTop());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 3).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 5).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 7).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASHED.ordinal(), TestUtility.getCellStyle(border, 17, 9).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 1).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 1).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 1).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 1).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 3).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 5).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 7).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASHED, TestUtility.getCellStyle(border, 17, 9).getBorderTop());
 
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 1).getBorderBottom());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 1).getBorderLeft());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 1).getBorderRight());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 1).getBorderTop());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 3).getBorderBottom());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 5).getBorderLeft());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 7).getBorderRight());
-      assertEquals(BorderStyle.DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 19, 9).getBorderTop());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 1).getBorderBottom());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 1).getBorderLeft());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 1).getBorderRight());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 1).getBorderTop());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 3).getBorderBottom());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 5).getBorderLeft());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 7).getBorderRight());
+      assertEquals(BorderStyle.DASH_DOT, TestUtility.getCellStyle(border, 19, 9).getBorderTop());
 
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 1).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 1).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 1).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 1).getBorderTop());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 3).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 5).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 7).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 21, 9).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 1).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 1).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 1).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 1).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 3).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 5).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 7).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT, TestUtility.getCellStyle(border, 21, 9).getBorderTop());
 
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 1).getBorderBottom());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 1).getBorderLeft());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 1).getBorderRight());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 1).getBorderTop());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 3).getBorderBottom());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 5).getBorderLeft());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 7).getBorderRight());
-      assertEquals(BorderStyle.DASH_DOT_DOT.ordinal(), TestUtility.getCellStyle(border, 23, 9).getBorderTop());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 1).getBorderBottom());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 1).getBorderLeft());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 1).getBorderRight());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 1).getBorderTop());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 3).getBorderBottom());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 5).getBorderLeft());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 7).getBorderRight());
+      assertEquals(BorderStyle.DASH_DOT_DOT, TestUtility.getCellStyle(border, 23, 9).getBorderTop());
 
       // Yes, the "C" on the end is actually there in the POI Enum constant.
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 1).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 1).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 1).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 1).getBorderTop());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 3).getBorderBottom());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 5).getBorderLeft());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 7).getBorderRight());
-      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOTC.ordinal(), TestUtility.getCellStyle(border, 25, 9).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 1).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 1).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 1).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 1).getBorderTop());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 3).getBorderBottom());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 5).getBorderLeft());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 7).getBorderRight());
+      assertEquals(BorderStyle.MEDIUM_DASH_DOT_DOT, TestUtility.getCellStyle(border, 25, 9).getBorderTop());
 
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 1).getBorderBottom());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 1).getBorderLeft());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 1).getBorderRight());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 1).getBorderTop());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 3).getBorderBottom());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 5).getBorderLeft());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 7).getBorderRight());
-      assertEquals(BorderStyle.SLANTED_DASH_DOT.ordinal(), TestUtility.getCellStyle(border, 27, 9).getBorderTop());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 1).getBorderBottom());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 1).getBorderLeft());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 1).getBorderRight());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 1).getBorderTop());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 3).getBorderBottom());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 5).getBorderLeft());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 7).getBorderRight());
+      assertEquals(BorderStyle.SLANTED_DASH_DOT, TestUtility.getCellStyle(border, 27, 9).getBorderTop());
 
       // BorderColors
       Sheet borderColor = workbook.getSheetAt(2);
@@ -350,20 +350,20 @@ public class StyleTagTest extends TestCase
          backgroundColors = new ArrayList<Color>(xssfBackgroundColors);
          foregroundColors = new ArrayList<Color>(xssfForegroundColors);
       }
-      List<Short> fillPatterns = Arrays.asList((short) FillPatternType.NO_FILL.ordinal(),
-         (short) FillPatternType.SOLID_FOREGROUND.ordinal(), (short) FillPatternType.FINE_DOTS.ordinal(),
-         (short) FillPatternType.ALT_BARS.ordinal(), (short) FillPatternType.SPARSE_DOTS.ordinal(),
-         (short) FillPatternType.THICK_HORZ_BANDS.ordinal(), (short) FillPatternType.THICK_VERT_BANDS.ordinal(),
-         (short) FillPatternType.THICK_BACKWARD_DIAG.ordinal(), (short) FillPatternType.THICK_FORWARD_DIAG.ordinal(),
-         (short) FillPatternType.BIG_SPOTS.ordinal(), (short) FillPatternType.BRICKS.ordinal(),
-         (short) FillPatternType.THIN_HORZ_BANDS.ordinal(), (short) FillPatternType.THIN_VERT_BANDS.ordinal(),
-         (short) FillPatternType.THIN_BACKWARD_DIAG.ordinal(), (short) FillPatternType.THIN_FORWARD_DIAG.ordinal(),
-         (short) FillPatternType.SQUARES.ordinal(), (short) FillPatternType.DIAMONDS.ordinal(),
-         (short) FillPatternType.LESS_DOTS.ordinal(), (short) FillPatternType.LEAST_DOTS.ordinal()
+      List<FillPatternType> fillPatterns = Arrays.asList( FillPatternType.NO_FILL,
+          FillPatternType.SOLID_FOREGROUND,  FillPatternType.FINE_DOTS,
+          FillPatternType.ALT_BARS,  FillPatternType.SPARSE_DOTS,
+          FillPatternType.THICK_HORZ_BANDS,  FillPatternType.THICK_VERT_BANDS,
+          FillPatternType.THICK_BACKWARD_DIAG,  FillPatternType.THICK_FORWARD_DIAG,
+          FillPatternType.BIG_SPOTS,  FillPatternType.BRICKS,
+          FillPatternType.THIN_HORZ_BANDS,  FillPatternType.THIN_VERT_BANDS,
+          FillPatternType.THIN_BACKWARD_DIAG,  FillPatternType.THIN_FORWARD_DIAG,
+          FillPatternType.SQUARES,  FillPatternType.DIAMONDS,
+          FillPatternType.LESS_DOTS,  FillPatternType.LEAST_DOTS
       );
       for (int i = 0; i < fillPatterns.size(); i++)
       {
-         short fillPattern = fillPatterns.get(i);
+         FillPatternType fillPattern = fillPatterns.get(i);
          int r = 2 * i + 1;
          for (int c = 0; c < backgroundColors.size(); c++)
          {
@@ -402,30 +402,30 @@ public class StyleTagTest extends TestCase
 
       // VerticalAlignments
       Sheet vertAlignment = workbook.getSheetAt(7);
-      assertEquals(VerticalAlignment.BOTTOM.ordinal(), TestUtility.getCellStyle(vertAlignment, 0, 1).getVerticalAlignment());
-      assertEquals(VerticalAlignment.BOTTOM.ordinal(), TestUtility.getCellStyle(vertAlignment, 0, 3).getVerticalAlignment());
-      assertEquals(VerticalAlignment.CENTER.ordinal(), TestUtility.getCellStyle(vertAlignment, 1, 1).getVerticalAlignment());
-      assertEquals(VerticalAlignment.CENTER.ordinal(), TestUtility.getCellStyle(vertAlignment, 1, 3).getVerticalAlignment());
-      assertEquals(VerticalAlignment.DISTRIBUTED.ordinal(), TestUtility.getCellStyle(vertAlignment, 2, 1).getVerticalAlignment());
-      assertEquals(VerticalAlignment.DISTRIBUTED.ordinal(), TestUtility.getCellStyle(vertAlignment, 2, 3).getVerticalAlignment());
-      assertEquals(VerticalAlignment.JUSTIFY.ordinal(), TestUtility.getCellStyle(vertAlignment, 3, 1).getVerticalAlignment());
-      assertEquals(VerticalAlignment.JUSTIFY.ordinal(), TestUtility.getCellStyle(vertAlignment, 3, 3).getVerticalAlignment());
-      assertEquals(VerticalAlignment.TOP.ordinal(), TestUtility.getCellStyle(vertAlignment, 4, 1).getVerticalAlignment());
-      assertEquals(VerticalAlignment.TOP.ordinal(), TestUtility.getCellStyle(vertAlignment, 4, 3).getVerticalAlignment());
+      assertEquals(VerticalAlignment.BOTTOM, TestUtility.getCellStyle(vertAlignment, 0, 1).getVerticalAlignment());
+      assertEquals(VerticalAlignment.BOTTOM, TestUtility.getCellStyle(vertAlignment, 0, 3).getVerticalAlignment());
+      assertEquals(VerticalAlignment.CENTER, TestUtility.getCellStyle(vertAlignment, 1, 1).getVerticalAlignment());
+      assertEquals(VerticalAlignment.CENTER, TestUtility.getCellStyle(vertAlignment, 1, 3).getVerticalAlignment());
+      assertEquals(VerticalAlignment.DISTRIBUTED, TestUtility.getCellStyle(vertAlignment, 2, 1).getVerticalAlignment());
+      assertEquals(VerticalAlignment.DISTRIBUTED, TestUtility.getCellStyle(vertAlignment, 2, 3).getVerticalAlignment());
+      assertEquals(VerticalAlignment.JUSTIFY, TestUtility.getCellStyle(vertAlignment, 3, 1).getVerticalAlignment());
+      assertEquals(VerticalAlignment.JUSTIFY, TestUtility.getCellStyle(vertAlignment, 3, 3).getVerticalAlignment());
+      assertEquals(VerticalAlignment.TOP, TestUtility.getCellStyle(vertAlignment, 4, 1).getVerticalAlignment());
+      assertEquals(VerticalAlignment.TOP, TestUtility.getCellStyle(vertAlignment, 4, 3).getVerticalAlignment());
 
       // Bold/Italic
       Sheet boldItalic = workbook.getSheetAt(8);
       Font f = workbook.getFontAt(TestUtility.getCellStyle(boldItalic, 0, 0).getFontIndex());
-      assertEquals(FontBoldweight.NORMAL.getIndex(), f.getBoldweight());
+      assertEquals(FontBoldweight.NORMAL.getIndex(), f.getBold());
       assertFalse(f.getItalic());
       f = workbook.getFontAt(TestUtility.getCellStyle(boldItalic, 0, 1).getFontIndex());
-      assertEquals(FontBoldweight.BOLD.getIndex(), f.getBoldweight());
+      assertEquals(FontBoldweight.BOLD.getIndex(), f.getBold());
       assertFalse(f.getItalic());
       f = workbook.getFontAt(TestUtility.getCellStyle(boldItalic, 1, 0).getFontIndex());
-      assertEquals(FontBoldweight.NORMAL.getIndex(), f.getBoldweight());
+      assertEquals(FontBoldweight.NORMAL.getIndex(), f.getBold());
       assertTrue(f.getItalic());
       f = workbook.getFontAt(TestUtility.getCellStyle(boldItalic, 1, 1).getFontIndex());
-      assertEquals(FontBoldweight.BOLD.getIndex(), f.getBoldweight());
+      assertEquals(FontBoldweight.BOLD.getIndex(), f.getBold());
       assertTrue(f.getItalic());
 
       // FontNames/HeightInPoints
@@ -500,63 +500,63 @@ public class StyleTagTest extends TestCase
       // Class only
       Sheet classOnly = workbook.getSheetAt(13);
       CellStyle cs = TestUtility.getCellStyle(classOnly, 1, 1);
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderBottom());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderLeft());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderRight());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderTop());
+      assertEquals(BorderStyle.THIN, cs.getBorderBottom());
+      assertEquals(BorderStyle.THIN, cs.getBorderLeft());
+      assertEquals(BorderStyle.THIN, cs.getBorderRight());
+      assertEquals(BorderStyle.THIN, cs.getBorderTop());
       assertEquals("ff0000", TestUtility.getCellBottomBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellLeftBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellRightBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellTopBorderColorString(classOnly, 1, 1));
-      assertEquals(CellStyle.ALIGN_CENTER, cs.getAlignment());
+      assertEquals(HorizontalAlignment.CENTER, cs.getAlignment());
       f = workbook.getFontAt(cs.getFontIndex());
       assertEquals("000000", TestUtility.getFontColorString(workbook, f));
       assertEquals(11, f.getFontHeightInPoints());
-      assertEquals(Font.BOLDWEIGHT_NORMAL, f.getBoldweight());
+      assertFalse(f.getBold());
 
       cs = TestUtility.getCellStyle(classOnly, 3, 1);
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderBottom());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderLeft());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderRight());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderTop());
-      assertEquals(CellStyle.ALIGN_GENERAL, cs.getAlignment());
+      assertEquals(BorderStyle.NONE, cs.getBorderBottom());
+      assertEquals(BorderStyle.NONE, cs.getBorderLeft());
+      assertEquals(BorderStyle.NONE, cs.getBorderRight());
+      assertEquals(BorderStyle.NONE, cs.getBorderTop());
+      assertEquals(HorizontalAlignment.GENERAL, cs.getAlignment());
       f = workbook.getFontAt(cs.getFontIndex());
       assertEquals("0000ff", TestUtility.getFontColorString(workbook, f));
       assertEquals(24, f.getFontHeightInPoints());
-      assertEquals(Font.BOLDWEIGHT_BOLD, f.getBoldweight());
+      assertTrue(f.getBold());
 
       cs = TestUtility.getCellStyle(classOnly, 5, 1);
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderBottom());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderLeft());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderRight());
-      assertEquals(BorderStyle.NONE.ordinal(), cs.getBorderTop());
-      assertEquals(CellStyle.ALIGN_GENERAL, cs.getAlignment());
+      assertEquals(BorderStyle.NONE, cs.getBorderBottom());
+      assertEquals(BorderStyle.NONE, cs.getBorderLeft());
+      assertEquals(BorderStyle.NONE, cs.getBorderRight());
+      assertEquals(BorderStyle.NONE, cs.getBorderTop());
+      assertEquals(HorizontalAlignment.GENERAL, cs.getAlignment());
       f = workbook.getFontAt(cs.getFontIndex());
       assertEquals("000000", TestUtility.getFontColorString(workbook, f));
       assertEquals(11, f.getFontHeightInPoints());
-      assertEquals(Font.BOLDWEIGHT_NORMAL, f.getBoldweight());
+      assertFalse(f.getBold());
 
       cs = TestUtility.getCellStyle(classOnly, 7, 1);
       f = workbook.getFontAt(cs.getFontIndex());
       assertEquals("008000", TestUtility.getFontColorString(workbook, f));
-      assertEquals(Font.BOLDWEIGHT_NORMAL, f.getBoldweight());
+      assertFalse(f.getBold());
       assertTrue(f.getItalic());
       assertEquals(24, f.getFontHeightInPoints());
 
       cs = TestUtility.getCellStyle(classOnly, 9, 1);
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderBottom());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderLeft());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderRight());
-      assertEquals(BorderStyle.THIN.ordinal(), cs.getBorderTop());
+      assertEquals(BorderStyle.THIN, cs.getBorderBottom());
+      assertEquals(BorderStyle.THIN, cs.getBorderLeft());
+      assertEquals(BorderStyle.THIN, cs.getBorderRight());
+      assertEquals(BorderStyle.THIN, cs.getBorderTop());
       assertEquals("ff0000", TestUtility.getCellBottomBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellLeftBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellRightBorderColorString(classOnly, 1, 1));
       assertEquals("ff0000", TestUtility.getCellTopBorderColorString(classOnly, 1, 1));
-      assertEquals(CellStyle.ALIGN_CENTER, cs.getAlignment());
+      assertEquals(HorizontalAlignment.CENTER, cs.getAlignment());
       f = workbook.getFontAt(cs.getFontIndex());
       assertEquals("0000ff", TestUtility.getFontColorString(workbook, f));
       assertEquals(24, f.getFontHeightInPoints());
-      assertEquals(Font.BOLDWEIGHT_BOLD, f.getBoldweight());
+      assertTrue(f.getBold());
    }
    
    /**
