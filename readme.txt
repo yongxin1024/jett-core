@@ -1,7 +1,12 @@
+Fork of JETT updated to POI5.
+
+Original readme below
+
+----------------
+
 JETT - Java Excel Template Translator
 ----------------
 
-Fork of JETT updated to POI5.
 JETT can be found online at http://jett.sourceforge.net.
 
 Description
@@ -143,3 +148,6 @@ had fixed a few performance issues, so they perform similarly.  However, JETT
 has a number of features that jXLS doesn't have (jXLS has a few features that
 JETT doesn't (yet) have.)  The bottom line is that I wanted a jXLS with more
 features, and JETT is the result.
+
+----------------
+End of original readme
