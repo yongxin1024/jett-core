@@ -1,6 +1,7 @@
 JETT - Java Excel Template Translator
 ----------------
 
+Fork of JETT updated to POI5.
 JETT can be found online at http://jett.sourceforge.net.
 
 Description
