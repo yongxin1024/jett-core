@@ -6,10 +6,10 @@
 <!--        <version>0.11.0</version>-->
 <!--    </parent>-->
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.sf.jett.lincor</groupId>
+    <groupId>com.opentext.ppm</groupId>
     <artifactId>jett-core</artifactId>
     <packaging>jar</packaging>
-    <version>0.11.5</version>
+    <version>0.12</version>
 
     <name>jett-core</name>
     <url>http://jett.sourceforge.net</url>
@@ -31,6 +31,14 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>ppm-repo</id>
+            <name>PPM Nexus </name>
+            <url>http://10.168.82.7:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>net.sf.jagg</groupId>
@@ -40,12 +48,12 @@
         <dependency>
             <artifactId>poi</artifactId>
             <groupId>org.apache.poi</groupId>
-            <version>5.2.2</version>
+            <version>5.3.0</version>
         </dependency>
         <dependency>
             <artifactId>poi-ooxml</artifactId>
             <groupId>org.apache.poi</groupId>
-            <version>5.2.2</version>
+            <version>5.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -55,7 +63,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -65,19 +73,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.17.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-jcl</artifactId>
-            <version>2.17.2</version>
+            <groupId>ch.qos.reload4j</groupId>
+            <artifactId>reload4j</artifactId>
+            <version>1.2.22</version>
         </dependency>
     </dependencies>
 </project>
